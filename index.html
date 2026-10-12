@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A portfolio showcasing data analysis and business insight projects.">
+  <title>Portfolio | Data Analysis</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17252a;
+      --muted: #52656a;
+      --paper: #f4f7f3;
+      --card: #ffffff;
+      --accent: #087e70;
+      --line: #dce6e1;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    a { color: var(--accent); }
+
+    .wrap {
+      width: min(100% - 2rem, 960px);
+      margin-inline: auto;
+    }
+
+    header {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand {
+      color: var(--ink);
+      font-weight: 750;
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    nav a { text-decoration: none; }
+
+    main { padding: 4.5rem 0 3rem; }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 750;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 { line-height: 1.15; }
+
+    h1 {
+      max-width: 720px;
+      margin: 0.8rem 0 1rem;
+      font-size: clamp(2.6rem, 7vw, 5rem);
+      letter-spacing: -0.065em;
+    }
+
+    .intro {
+      max-width: 640px;
+      color: var(--muted);
+      font-size: 1.15rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.75rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--accent);
+      border-radius: 0.5rem;
+      background: var(--accent);
+      color: white;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    section { padding: 2.5rem 0; }
+
+    .section-heading {
+      margin: 0 0 1.25rem;
+      font-size: 1.8rem;
+      letter-spacing: -0.04em;
+    }
+
+    .project {
+      padding: 1.5rem;
+      border: 1px solid var(--line);
+      border-radius: 0.9rem;
+      background: var(--card);
+      box-shadow: 0 12px 30px rgb(23 37 42 / 5%);
+    }
+
+    .project h3 {
+      margin: 0.45rem 0;
+      font-size: 1.35rem;
+    }
+
+    .project p { color: var(--muted); }
+
+    .metric {
+      display: inline-flex;
+      flex-direction: column;
+      margin-top: 0.5rem;
+      padding: 0.8rem 1rem;
+      border-radius: 0.6rem;
+      background: #e8f4ef;
+    }
+
+    .metric strong {
+      color: var(--accent);
+      font-size: 1.5rem;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .about {
+      max-width: 700px;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 1.5rem 0 2rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 560px) {
+      nav { align-items: flex-start; }
+      nav ul { gap: 0.75rem; font-size: 0.9rem; }
+      main { padding-top: 3.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="#">Portfolio</a>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section aria-labelledby="intro-title">
+      <p class="eyebrow">Data analysis · Business insights</p>
+      <h1 id="intro-title">Turning data into clear decisions.</h1>
+      <p class="intro">I explore business data, find the numbers that matter, and communicate useful insights with clarity.</p>
+      <div class="actions">
+        <a class="button" href="#work">Explore my work</a>
+        <a class="button secondary" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <section id="work" aria-labelledby="work-title">
+      <p class="eyebrow">Selected project</p>
+      <h2 class="section-heading" id="work-title">Featured work</h2>
+      <article class="project">
+        <p class="eyebrow">Sales analytics · Q1 2025</p>
+        <h3>Regional electronics sales performance</h3>
+        <p>Analyzed transaction records by city and month, calculating revenue as quantity multiplied by unit price. For Chennai in March 2025, three matching transactions generated total revenue of 5,679.17, or 5,679 rounded to the nearest integer.</p>
+        <div class="metric" aria-label="Chennai March revenue: 5,679">
+          <strong>5,679</strong>
+          <span>Chennai revenue · March 2025</span>
+        </div>
+      </article>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <p class="eyebrow">A little about me</p>
+      <h2 class="section-heading" id="about-title">Curious by nature, analytical by approach.</h2>
+      <p class="about">I enjoy working with real-world datasets, checking assumptions, and turning detailed analysis into concise takeaways that support better decisions.</p>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow">Let's connect</p>
+      <h2 class="section-heading" id="contact-title">Have a question or project?</h2>
+      <p>Email: <!--email_off-->24f3002454@ds.study.iitm.ac.in<!--/email_off--></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 · Data analysis portfolio</div>
+  </footer>
+</body>
+</html>
