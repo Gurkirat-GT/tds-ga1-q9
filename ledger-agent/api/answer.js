@@ -214,10 +214,10 @@ function extractLimit(question) {
 
 function countMode(question) {
   return /\b(?:how many|number of|count of|count|quantity of|units? sold)\b/i.test(question)
-    && !/\b(?:revenue|sales|spend|spent|refund amount|amount refunded|value)\b/i.test(question)
+    && !/\b(?:revenue|sales|spend|spent|refund amount|amount refunded|value|average|avg|mean|worth|dollars?|USD|EUR|INR)\b/i.test(question)
     || /\b(?:most|fewest|least|top|highest)\b/i.test(question)
       && /\b(?:orders?|transactions?)\b/i.test(question)
-      && !/\b(?:revenue|sales|spend|spent|refund amount|amount refunded|value)\b/i.test(question);
+      && !/\b(?:revenue|sales|spend|spent|refund amount|amount refunded|value|average|avg|mean|worth|dollars?|USD|EUR|INR)\b/i.test(question);
 }
 
 function answerQuestion(question, ledger) {
