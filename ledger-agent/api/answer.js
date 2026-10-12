@@ -236,8 +236,8 @@ function answerQuestion(question, ledger) {
     : matches;
   const currency = targetCurrency(question);
 
-  if (/\b(?:unique|distinct)\s+customers?\b|\bhow many customers\b|\bnumber of customers\b/i.test(question)) {
-    return new Set(matches.map((order) => order.customer)).size;
+  if (/\b(?:unique|distinct|different)\s+customers?\b|\bhow many customers\b|\bnumber of customers\b/i.test(question)) {
+    return new Set(selected.map((order) => order.customer)).size;
   }
   if (/\bhow many (?:different|distinct|unique) products\b/i.test(question)) {
     return new Set(selected.map((order) => order.product)).size;
